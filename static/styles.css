@@ -19,6 +19,15 @@ body {
     --card-bg: #1f1f1f;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 2rem;
+    transition: background 0.3s, color 0.3s;
+}
+
 .container {
     max-width: 800px;
     margin: auto;
@@ -32,6 +41,13 @@ form {
 input, button {
     padding: 10px;
     margin: 5px;
+    border-radius: 6px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 .forecast {
@@ -47,4 +63,11 @@ input, button {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     width: 150px;
+}
+
+footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text);
 }
