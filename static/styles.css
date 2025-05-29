@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 2rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+:root[data-theme='light'] {
+    --bg: #f0f0f0;
+    --text: #222;
+    --card-bg: #fff;
+}
+
+:root[data-theme='dark'] {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --card-bg: #1f1f1f;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.day-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 150px;
+}
