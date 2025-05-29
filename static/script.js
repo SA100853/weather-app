@@ -1,4 +1,12 @@
 function toggleTheme() {
     const html = document.documentElement;
-    html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+    const current = html.dataset.theme;
+    const newTheme = current === "dark" ? "light" : "dark";
+    html.dataset.theme = newTheme;
+    localStorage.setItem("theme", newTheme);
 }
+
+window.onload = () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = savedTheme;
+};
