@@ -10,7 +10,7 @@ body {
 :root[data-theme='light'] {
     --bg: #f0f0f0;
     --text: #222;
-    --card-bg: #fff;
+    --card-bg: #acbbc6;
 }
 
 :root[data-theme='dark'] {
