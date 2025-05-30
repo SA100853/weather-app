@@ -16,7 +16,7 @@
       <button type="submit">Get Weather</button>
     </form>
 
-    <button id="toggleTheme">🌙 Toggle Theme</button>
+    <button id="toggleTheme">🌙/☀️</button>
 
     {% if weather %}
       <h2>Weather in {{ weather.city }}</h2>
@@ -30,8 +30,8 @@
             <img src="http://openweathermap.org/img/wn/{{ day.icon }}@2x.png" alt="Icon">
             <p>{{ day.temp }}°C</p>
             <p>{{ day.description }}</p>
-            <p>💧 {{ day.humidity }}%</p>
-            <p>🌬️ {{ day.wind }} m/s</p>
+            <p> Humidity💧 {{ day.humidity }}%</p>
+            <p>Wind Speed 🌬️ {{ day.wind }} m/s</p>
           </div>
         {% endfor %}
       </div>
