@@ -19,6 +19,8 @@ def get_coordinates(city_name):
         country = response[0]["country"]
         return lat, lon, f"{name}, {country}"
     return None, None, None
+def unix_to_time(timestamp, timezone_offset):
+    return datetime.utcfromtimestamp(timestamp + timezone_offset).strftime('%H:%M')
 
 @app.route("/", methods=["GET", "POST"])
 def index():
