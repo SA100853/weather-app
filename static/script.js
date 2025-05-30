@@ -1,12 +1,16 @@
-function toggleTheme() {
-    const html = document.documentElement;
-    const current = html.dataset.theme;
-    const newTheme = current === "dark" ? "light" : "dark";
-    html.dataset.theme = newTheme;
-    localStorage.setItem("theme", newTheme);
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('toggleTheme');
+  const body = document.body;
 
-window.onload = () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.dataset.theme = savedTheme;
-};
+  // Load theme from local storage
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.remove('light');
+    body.classList.add('dark');
+  }
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    body.classList.toggle('light');
+    localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+  });
+});
